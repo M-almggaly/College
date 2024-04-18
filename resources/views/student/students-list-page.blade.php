@@ -34,9 +34,9 @@
                     <td>
                     <button type="submit" name="check" style="background: transparent"><i class="fa fa-check" style="color: #5bbf90;"></i></button></td>
                     <td>
-                    
+                    <form action="{{ route('student.destroy', $student['id']) }}" method="POST">
                     <button type="submit" style="background: transparent"><i class="fa fa-trash" style="color: #fd3333ed;"></i></button></td>
-                    
+                    </form>
                     @endforeach
 
                     </table>

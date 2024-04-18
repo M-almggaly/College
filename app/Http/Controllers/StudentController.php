@@ -11,7 +11,7 @@ class StudentController extends Controller
 public function index() {
     return view('student.registration-Page');
 }
-// This function Calls The students-list-page With the variable Students That Holds All Rows From the Student table
+// This function Calls The students-list-page// This function Calls The students-list-page With the variable Students That Holds All Rows From the Student table
 public function student() {
     return view('student.students-list-page',[
       'Students' => Students::All()
@@ -19,6 +19,7 @@ public function student() {
 }
 /* This function Takes Request as Parametar And retrive the Data From registration-Page
 And set them as required then using the defined model we create new record for Students Table*/
+
 public function store(Request $request){
   $request->validate([
     'name' => 'required',
@@ -42,5 +43,11 @@ if($create->save()){
   return response()->json('Fail','400');
  }
 }
-
+public function destroy($id){
+  $delete = Students::findOrFail($id);
+  $delete->delete();
+  return view('student.students-list-page',[
+    'Students' => Students::All()
+  ]);
+}
 }

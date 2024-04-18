@@ -16,3 +16,4 @@ Route::get('/login-student', [StudentController::class, 'index']);
 Route::post('/login-student', [StudentController::class, 'store']);
 
 Route::get('/student', [StudentController::class, 'student'] );
+Route::delete('/student/{id}', [StudentController::class, 'destroy'])->name('student.destroy');
