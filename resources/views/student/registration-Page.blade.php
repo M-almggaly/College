@@ -12,44 +12,45 @@
     <div class="container">
       <h2>نظام التسجيل الطلاب</h2>
 
-      <form >
+      <form method="POST">
+        @csrf
         <h3>صفحة التسجيل</h3>
         <div class="field">
           <i class="fas fa-user"></i>
           <input type="text" class="name"
-          placeholder=" أسم الطالب">
+          placeholder=" أسم الطالب" name="name">
         </div>
         <div class="field">
           <i class="fa fa-phone" aria-hidden="true"></i>
           <input type="number" class="phon"
-          placeholder=" رقم الجوال">
+          placeholder=" رقم الجوال" name="phone">
         </div>
         <div class="field">
           <i class="fa fa-map-marker" aria-hidden="true"></i>
           <input type="text" class="address"
-          placeholder=" العنوان / السكن">
+          placeholder=" العنوان / السكن" name="address">
         </div>
         <div class="field">
           <i class="fa fa-envelope" aria-hidden="true"></i>
           <input type="email" class="email"
-          placeholder=" الايميل / البريد الكتروني">
+          placeholder=" الايميل / البريد الكتروني" name="email">
         </div>
         <div class="field">
           <i class="fa fa-puzzle-piece" aria-hidden="true"></i>
           <input type="text" class="Section"
-          placeholder=" القسم / التخصص">
+          placeholder=" القسم / التخصص" name="section">
         </div>
         <div class="Choices">
           <div class="general">
-          <input type="radio" class="radio" name="a">
+          <input type="radio" class="radio" name="type">
           <label>عام</label>
           </div>
           <div>
-          <input type="radio" class="radio" name="a">
+          <input type="radio" class="radio" name="type">
           <label>موازي</label>
         </div>
         </div>
-        <a href="#" class="btn">التسجيل</a>
+        <button type="submit" name="submit" class="btn">تسجيل</button>
       </form>
     </div>
   </div>

@@ -12,5 +12,7 @@ use App\Http\Controllers\StudentController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/login-student', [StudentController::class, 'index'] );
+Route::get('/login-student', [StudentController::class, 'index']);
+Route::post('/login-student', [StudentController::class, 'store']);
+
 Route::get('/student', [StudentController::class, 'student'] );
