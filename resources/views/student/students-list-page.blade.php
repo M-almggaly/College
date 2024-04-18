@@ -10,15 +10,14 @@
 <body>
     <table>
           <tr id="headeruser">              
-                        <th>Id</th>
-                        <th>أسم الطالب</th>
-                        <th>رقم الجوال</th>
-                        <th>العنوان /السكن</th>
-                        <th>الايميل/البريدالكتروني</th>
-                        <th>القسم /التخصص</th>
-                        <th>الحالة الدراسية</th>
-                        <th colspan="3">تعديل  او  حذف</th>
-    
+                    <th>Id</th>
+                    <th>أسم الطالب</th>
+                    <th>رقم الجوال</th>
+                    <th>العنوان /السكن</th>
+                    <th>الايميل/البريدالكتروني</th>
+                    <th>القسم /التخصص</th>
+                    <th>الحالة الدراسية</th>
+                    <th colspan="3">تعديل  او  حذف</th>
                     </tr>
                     <!-- Here We Used Laravel Classes Foreach To iretate The $Students Object That We Recevied From the Controller -->
                     @foreach ( $Students as $student )
@@ -36,12 +35,13 @@
                     </form>
                     <td>
                     <form action="{{ route('student.destroy', $student['id']) }}" method="POST">
+                    @csrf
                     @method('DELETE')
                     <button type="submit" style="background: transparent"><i class="fa fa-trash" style="color: #fd3333ed;"></i></button>
                     </form>
                     @endforeach
-                    </td></tr>
-
+                    </td>
+                  </tr>
                     </table>
                     </body>
                     </html>

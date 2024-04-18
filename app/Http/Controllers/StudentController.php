@@ -1,7 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
 use App\Models\Students;
 use Illuminate\Http\Request;
 
@@ -19,7 +17,6 @@ public function student() {
 }
 /* This function Takes Request as Parametar And retrive the Data From registration-Page
 And set them as required then using the defined model we create new record for Students Table*/
-
 public function store(Request $request){
   $request->validate([
     'name' => 'required',
@@ -67,14 +64,12 @@ public function updated(Request $request, $id) {
     'email' => 'required',
     'section' => 'required'
   ]);
-
   $student = Students::findOrFail($id);
   $student->name = strip_tags($request->input('name'));
   $student->phone = strip_tags($request->input('phone'));
   $student->addrs = strip_tags($request->input('address'));
   $student->email = strip_tags($request->input('email'));
   $student->Section = strip_tags($request->input('section'));
-
   if ($student->save()) {
     return view('student.students-list-page', [
       'Students' => Students::all()

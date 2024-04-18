@@ -11,7 +11,6 @@
   <div class="card">
     <div class="container">
       <h2>نظام التسجيل الطلاب</h2>
-
       <form action="{{ route('student.updated', $Students['id']) }}" method="POST">
         @csrf
         <h3>صفحة التسجيل</h3>
@@ -40,7 +39,6 @@
           <input type="text" class="Section"
           placeholder=" القسم / التخصص" name="section" value="{{ $Students['Section'] }}">
         </div>
-        
         <button type="submit" name="submit" class="btn">تسجيل</button>
       </form>
     </div>

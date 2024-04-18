@@ -39,21 +39,10 @@
           <input type="text" class="Section"
           placeholder=" القسم / التخصص" name="section">
         </div>
-        <div class="Choices">
-          <div class="general">
-          <input type="radio" class="radio" name="type">
-          <label>عام</label>
-          </div>
-          <div>
-          <input type="radio" class="radio" name="type">
-          <label>موازي</label>
-        </div>
-        </div>
         <button type="submit" name="submit" class="btn">تسجيل</button>
       </form>
     </div>
   </div>
-
   <div class="blob">
     <!-- This SVG is from https://codepen.io/Ali_Farooq_/pen/gKOJqx -->
     <svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 350">
