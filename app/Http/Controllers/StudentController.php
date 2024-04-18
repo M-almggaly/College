@@ -43,11 +43,44 @@ if($create->save()){
   return response()->json('Fail','400');
  }
 }
+//This function Gets The id From The Route Then We Delete The Row With The same id
 public function destroy($id){
   $delete = Students::findOrFail($id);
   $delete->delete();
   return view('student.students-list-page',[
     'Students' => Students::All()
   ]);
+}
+// This function gets the id from the route then we send the object to updatestudent to update the record
+public function update($id) {
+  $student = Students::findOrFail($id);
+  return view('student.updatestudent',[
+    'Students' => $student
+  ]);
+}
+//This is similer To the store function except we store the data to the id 
+public function updated(Request $request, $id) {
+  $request->validate([
+    'name' => 'required',
+    'phone' => 'required',
+    'address' => 'required',
+    'email' => 'required',
+    'section' => 'required'
+  ]);
+
+  $student = Students::findOrFail($id);
+  $student->name = strip_tags($request->input('name'));
+  $student->phone = strip_tags($request->input('phone'));
+  $student->addrs = strip_tags($request->input('address'));
+  $student->email = strip_tags($request->input('email'));
+  $student->Section = strip_tags($request->input('section'));
+
+  if ($student->save()) {
+    return view('student.students-list-page', [
+      'Students' => Students::all()
+    ]);
+  } else {
+    return response()->json('Fail', 400);
+  }
 }
 }

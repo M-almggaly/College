@@ -8,7 +8,6 @@
   <title>Registration Page</title>
 </head>
 <body>
-<form>
     <table>
           <tr id="headeruser">              
                         <th>Id</th>
@@ -32,16 +31,17 @@
                     <td>{{ $student->Section }}</td>
                     <td></td>
                     <td>
-                    <button type="submit" name="check" style="background: transparent"><i class="fa fa-check" style="color: #5bbf90;"></i></button></td>
+                    <form action="{{ route('student.update', $student['id']) }}" method="GET">
+                    <button type="submit" style="background: transparent"><i class="fa fa-check" style="color: #5bbf90;"></i></button></td>
+                    </form>
                     <td>
                     <form action="{{ route('student.destroy', $student['id']) }}" method="POST">
-                    <button type="submit" style="background: transparent"><i class="fa fa-trash" style="color: #fd3333ed;"></i></button></td>
+                    @method('DELETE')
+                    <button type="submit" style="background: transparent"><i class="fa fa-trash" style="color: #fd3333ed;"></i></button>
                     </form>
                     @endforeach
+                    </td></tr>
 
                     </table>
-                    </form>
-
-
                     </body>
                     </html>
