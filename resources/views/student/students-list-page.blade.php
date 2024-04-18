@@ -32,20 +32,6 @@
                     <td><button type="submit" name="check" style="background: transparent"><i class="fa fa-check" style="color: #5bbf90;"></i></button></td>
                     <td><button type="submit" name="delete" style="background: transparent"><i class="fa fa-trash" style="color: #fd3333ed;"></i></button></td>
 
-                </tr>
-                <tr id="popu">
-                <td>1</td>
-                <td>محمد أحمد المجعلي</td>
-                <td>773251965</td>
-                <td>التواهي حجيف</td>
-                <td>mohammedalmgaly@gmail.com</td>
-                <td>برمجة حاسوب</td>
-                <td>موازي</td>
-                <td><button type="submit" name="check" style="background: transparent"><i class="fa fa-check" style="color: #5bbf90;"></i></button></td>
-                <td><button type="submit" name="delete" style="background: transparent"><i class="fa fa-trash" style="color: #fd3333ed;"></i></button></td>
-
-            </tr>';
-
 
                     </table>
                     </form>

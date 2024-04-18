@@ -14,4 +14,3 @@ use App\Http\Controllers\StudentController;
 */
 Route::get('/login-student', [StudentController::class, 'index'] );
 Route::get('/student', [StudentController::class, 'student'] );
-
