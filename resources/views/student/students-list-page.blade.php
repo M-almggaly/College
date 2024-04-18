@@ -9,7 +9,7 @@
 </head>
 <body>
 <form>
-    <table>
+    <table> 
           <tr id="headeruser">              
                         <th>Id</th>
                         <th>أسم الطالب</th>
